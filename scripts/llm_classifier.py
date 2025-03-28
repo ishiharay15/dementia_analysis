@@ -32,7 +32,7 @@ parser = argparse.ArgumentParser(description="Dementia Classification using LLMs
 parser.add_argument("--llm", type=str, choices=SUPPORTED_LLMS.keys(), required=True, help="Select the LLM model to use")
 parser.add_argument("--csv", type=str, default="TAUKADIAL-24/test.csv", help="Path to the test dataset CSV")
 parser.add_argument("--lang", type=str, choices=["en", "cn", "all"], default="all", help="Choose language: 'en' (English), 'zh' (Chinese), or 'all'")
-parser.add_argument("--hf_token", type=str, default="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", help="Hugging Face token for authentication")
+parser.add_argument("--hf_token", type=str, help="Hugging Face token for authentication")
 args = parser.parse_args()
 
 # # Prompt format
